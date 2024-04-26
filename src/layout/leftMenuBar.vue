@@ -1,117 +1,16 @@
 <template>
-  <div class="dashboard-container">
-    <div class="sidebar">
-      <ul class="menu">
-        <li>
-          <div class="iconContainer">
-            <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-
-            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-            <svg
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M7 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V7C0 7.26522 0.105357 7.51957 0.292893 7.70711C0.48043 7.89464 0.734784 8 1 8H7C7.26522 8 7.51957 7.89464 7.70711 7.70711C7.89464 7.51957 8 7.26522 8 7V1C8 0.734784 7.89464 0.48043 7.70711 0.292893C7.51957 0.105357 7.26522 0 7 0ZM6 6H2V2H6V6ZM17 10H11C10.7348 10 10.4804 10.1054 10.2929 10.2929C10.1054 10.4804 10 10.7348 10 11V17C10 17.2652 10.1054 17.5196 10.2929 17.7071C10.4804 17.8946 10.7348 18 11 18H17C17.2652 18 17.5196 17.8946 17.7071 17.7071C17.8946 17.5196 18 17.2652 18 17V11C18 10.7348 17.8946 10.4804 17.7071 10.2929C17.5196 10.1054 17.2652 10 17 10ZM16 16H12V12H16V16ZM14 0C11.794 0 10 1.794 10 4C10 6.206 11.794 8 14 8C16.206 8 18 6.206 18 4C18 1.794 16.206 0 14 0ZM14 6C12.897 6 12 5.103 12 4C12 2.897 12.897 2 14 2C15.103 2 16 2.897 16 4C16 5.103 15.103 6 14 6ZM4 10C1.794 10 0 11.794 0 14C0 16.206 1.794 18 4 18C6.206 18 8 16.206 8 14C8 11.794 6.206 10 4 10ZM4 16C2.897 16 2 15.103 2 14C2 12.897 2.897 12 4 12C5.103 12 6 12.897 6 14C6 15.103 5.103 16 4 16Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-        </li>
-        <!-- 2ndIcon -->
-        <li>
-          <div class="iconContainer">
-            <!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-            <svg
-              width="18"
-              height="20"
-              viewBox="0 0 18 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M9 0.5C8.01109 0.5 7.04439 0.793245 6.22215 1.34265C5.3999 1.89206 4.75904 2.67295 4.3806 3.58658C4.00216 4.50021 3.90315 5.50555 4.09607 6.47545C4.289 7.44536 4.7652 8.33627 5.46447 9.03553C6.16373 9.7348 7.05464 10.211 8.02455 10.4039C8.99445 10.5969 9.99979 10.4978 10.9134 10.1194C11.827 9.74096 12.6079 9.1001 13.1573 8.27785C13.7068 7.45561 14 6.48891 14 5.5C14 4.17392 13.4732 2.90215 12.5355 1.96447C11.5979 1.02678 10.3261 0.5 9 0.5ZM9 8.5C8.40666 8.5 7.82664 8.32405 7.33329 7.99441C6.83994 7.66476 6.45542 7.19623 6.22836 6.64805C6.0013 6.09987 5.94189 5.49667 6.05764 4.91473C6.1734 4.33279 6.45912 3.79824 6.87868 3.37868C7.29824 2.95912 7.83279 2.6734 8.41473 2.55764C8.99667 2.44189 9.59987 2.5013 10.1481 2.72836C10.6962 2.95542 11.1648 3.33994 11.4944 3.83329C11.8241 4.32664 12 4.90666 12 5.5C12 6.29565 11.6839 7.05871 11.1213 7.62132C10.5587 8.18393 9.79565 8.5 9 8.5ZM18 19.5V18.5C18 16.6435 17.2625 14.863 15.9497 13.5503C14.637 12.2375 12.8565 11.5 11 11.5H7C5.14348 11.5 3.36301 12.2375 2.05025 13.5503C0.737498 14.863 0 16.6435 0 18.5V19.5H2V18.5C2 17.1739 2.52678 15.9021 3.46447 14.9645C4.40215 14.0268 5.67392 13.5 7 13.5H11C12.3261 13.5 13.5979 14.0268 14.5355 14.9645C15.4732 15.9021 16 17.1739 16 18.5V19.5H18Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-        </li>
-        <li>
-          <div class="iconContainer">
-            <svg
-              width="18"
-              height="20"
-              viewBox="0 0 18 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M16 0H6C4.897 0 4 0.897 4 2V8H2C0.897 8 0 8.897 0 10V19C0 19.2652 0.105357 19.5196 0.292893 19.7071C0.48043 19.8946 0.734784 20 1 20H17C17.2652 20 17.5196 19.8946 17.7071 19.7071C17.8946 19.5196 18 19.2652 18 19V2C18 0.897 17.103 0 16 0ZM2 10H8V18H2V10ZM16 18H10V10C10 8.897 9.103 8 8 8H6V2H16V18Z"
-                fill="white"
-              />
-              <path
-                d="M8 4H10V6H8V4ZM12 4H14V6H12V4ZM12 8.031H14V10H12V8.031ZM12 12H14V14H12V12ZM4 12.001H6V14.001H4V12.001Z"
-                fill="white"
-              />
-            </svg>
-          </div>
-        </li>
-        <li>
-          <div class="iconContainer">
-            <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 0H2C0.897 0 0 0.897 0 2V15C0 16.103 0.897 17 2 17H6L9 20L12 17H16C17.103 17 18 16.103 18 15V2C18 0.897 17.103 0 16 0ZM11 15L9 17L7 15H2V2H16L16.002 15H11Z" fill="white"/>
-</svg>
-
-          </div>
-        </li>
-      </ul>
-    </div>
-    <div class="main-content">
-      <!-- Your main content goes here -->
-    </div>
-  </div>
+  <div class="side_Bar_Container"> jello</div>
 </template>
-
-
 <style scoped>
-/* .leftBar {
-  background: #143e6f;
-  min-height: 982px;
+.side_Bar_Container {
+  height: 100%; 
   width: 56px;
-} */
-.dashboard-container {
-  display: flex;
-}
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  padding-top: 20px;
 
-.sidebar {
-  width: 56px;
-  background-color: #143e6f;
-  min-height: 982px;
-  color: #fff;
-}
-
-.menu {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.menu li {
-  padding: 10px 2px;
-}
-
-.iconContainer{
-
-    font-size: 20px;
-}
-.iconContainer:hover {
-  background-color: red;
-  width: 38px;
-  height: 39px;
-  border-radius: 50px;
-  text-align: center;
+  color: red;
 }
 </style>

@@ -1,25 +1,61 @@
 <template>
-  <div>
-    <div class="dashboard-container">
-      <leftMenuBar /> 
-      <topBar />
-      <div class="main-content">
-        <!-- Your main content goes here -->
+  <div class="dashboard-container">
+    <div class="topbar">
+      <div><topBar /></div>
+    </div>
+    <div class="sidebar">
+      <leftMenuBar />
+    </div>
+    <div class="mainContainer">
+      <div class="leftSideMainContain">
+        <div>
+          <subheader />
+        </div>
       </div>
+      <div></div>
     </div>
   </div>
 </template>
 <script setup>
 import leftMenuBar from "../layout/leftMenuBar.vue";
 import topBar from "../layout/topBar.vue";
+import tabDesign from "../layout/tabDesign.vue";
+import subheader from "../layout/subheader.vue";
 </script>
-<style scoped>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  <style scoped>
 .dashboard-container {
   display: flex;
-  height: 100vh;
+  flex-direction: column;
+  width: 100%;
+  box-shadow: 0px 1px 3px 0px #00000012;
+  box-shadow: 0px 1px 2px -2px #0000000f;
+  box-shadow: 0px 0px 1px 1px #0000000d;
+  position: fixed;
+  left: 57px;
 }
-
-.main-content {
-  flex: 1;
+.mainContainer {
+  display: flex;
+}
+.leftSideMainContain {
+  width: 70%;
 }
 </style>
+  
