@@ -57,5 +57,10 @@ import subheader from "../layout/subheader.vue";
 .leftSideMainContain {
   width: 70%;
 }
+@media (max-width: 992px) {
+  .leftSideMainContain {
+    width: 100%;
+  }
+}
 </style>
   
