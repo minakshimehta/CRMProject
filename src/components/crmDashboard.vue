@@ -11,6 +11,15 @@
         <div>
           <subheader />
         </div>
+        <div class="profileDetailsPageUI">
+          <profileDetailsPage />
+        </div>
+        <div>
+          <userDetails/>
+        </div>
+        <div>
+          <tabDesign/>
+        </div>
       </div>
       <div></div>
     </div>
@@ -21,6 +30,9 @@ import leftMenuBar from "../layout/leftMenuBar.vue";
 import topBar from "../layout/topBar.vue";
 import tabDesign from "../layout/tabDesign.vue";
 import subheader from "../layout/subheader.vue";
+import profileDetailsPage from "../layout/profileDetailsPage.vue";
+import userDetails from "../layout/userDetails.vue";
+
 </script>
 
 
@@ -53,14 +65,27 @@ import subheader from "../layout/subheader.vue";
 }
 .mainContainer {
   display: flex;
+  
 }
 .leftSideMainContain {
   width: 70%;
+  border-width: 0px, 1px, 1px, 0px;
+
+border-style: solid;
+
+border-color: var(--N300, #E9ECEF);
+
+
 }
 @media (max-width: 992px) {
   .leftSideMainContain {
     width: 100%;
   }
+}
+
+.profileDetailsPageUI {
+
+
 }
 </style>
   

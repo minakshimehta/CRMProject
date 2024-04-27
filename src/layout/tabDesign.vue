@@ -1,81 +1,51 @@
 <template>
   <div>
-    <div class="tab">
-      <button
-        class="tablinks"
-        v-for="(tab, index) in tabs"
-        :key="index"
-        @click="openCity(tab)"
-        :class="{ active: activeTab === tab }"
-      >
-        {{ tab }}
-      </button>
+    <div class="tabsHeader">
+      <div v-for="tab in tabNames" :key="tab" class="tabsBtn">{{ tab }}</div>
     </div>
-
-    <div class="tabcontent" :id="tab" :class="{ active: activeTab === tab }">
-      hello
+    <div>
+      <assignedJobs />
     </div>
   </div>
 </template>
+
 <script>
+import assignedJobs from "./assignedJobs.vue";
+
 export default {
-  name: "Dashboard",
+  components: { assignedJobs },
   data() {
     return {
-      activeTab: "London",
-      tabs: [
+      tabNames: [
         "All Details",
         "Assigned Jobs",
         "Related Emails",
         "Candidate Questions",
         "Hotlists",
-        "Related Deals",
+        "Related Deals6",
         "Contact(s) Pitched",
       ],
     };
   },
-  methods: {
-    openCity(cityName) {
-      this.activeTab = cityName;
-    },
-  },
 };
 </script>
 
-<style  scoped>
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
+ 
+<style scoped>
+.tabsHeader {
+  background-color: #e9ecef;
+  color: #343a40;
+  display: flex;
+  margin-bottom: -10px;
 }
-
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
+.tabsBtn {
+  padding: 30px 32px;
+  font-size: 13px;
+  font-weight: 600;
 }
-
-.tab button:hover {
-  background-color: #ddd;
-}
-
-.tab button.active {
-  background-color: #ccc;
-}
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-
-.tabcontent.active {
-  display: block;
+.tabsBtn:hover {
+  background-color: white;
+  color: #1170ca;
+  border-bottom: 3px solid #1170ca;
 }
 </style>
