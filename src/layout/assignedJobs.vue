@@ -1,63 +1,106 @@
 <template>
   <div>
-
-  <div class="assigned_Jobs">
-    <div class="assigned_Jobs_Header">
-      <div>Assigned Job to William Sample</div>
-    </div>
-    <div class="assigned_Jobs_Header">
-      <div class="assignedBtnContainer">
-        <button class="AssignJob">Assign To Job</button>
-        <button class="allAssignJob">View All Assigned Jobs</button>
+    <div class="assigned_Jobs">
+      <div class="assigned_Jobs_Header">
+        <div>Assigned Job to William Sample</div>
+      </div>
+      <div class="assigned_Jobs_Header">
+        <div class="assignedBtnContainer">
+          <button class="AssignJob">Assign To Job</button>
+          <button class="allAssignJob">View All Assigned Jobs</button>
+        </div>
       </div>
     </div>
-    
-  </div>
-  <div>
-      <div class="table-responsive">
-  <table>
-    
-    <tbody>
-      <tr v-for="(item, index) in items" :key="index">
-        <td><img src="../assets/avatar.png" alt="Avatar" /></td>
-        <td>{{ item.column1 }}</td>
-        <td>{{ item.column2 }}</td>
-        <td>{{ item.column3 }}</td>
-        <td>{{ item.column4 }}</td>
-        <td>{{ item.column5 }}</td>
-        <td><input type="checkbox" v-model="item.switchValue" /></td>
-      </tr>
-    </tbody>
-  </table>
-</div>
 
+    <div class="assignData" v-for="(user, index) in users" :key="index">
+      <div class="tableUI">
+        <table>
+          <tbody>
+            <tr>
+              <td style="width: 10px">
+                <div class="tableAvatar">M</div>
+              </td>
+              <td>
+                <div class="designationName">
+                  {{ user.designationName }}
+                </div>
+                <div class="companyName">
+                  {{ user.companyName }}
+                </div>
+              </td>
+              <td>
+                <div style="" class="userUI">
+                  <span style="padding-right: 8px"
+                    ><img
+                      src="../assets/user.svg"
+                      alt=""
+                      style="width: 12px; height: 12px" /></span
+                  >{{ user.name }}
+                </div>
+                <div class="userUI">
+                  <span style="padding-right: 8px"
+                    ><img
+                      src="../assets/time.svg"
+                      alt=""
+                      style="width: 12px; height: 12px" /></span
+                  >{{ user.year }}
+                </div>
+              </td>
+              <td>
+                <div>
+                  <button class="assignBtnTable">assigned</button>
+                </div>
+              </td>
+              <td>
+                <div>
+                  <button class="viewFile">View Files</button>
+                </div>
+              </td>
+              <td>
+                <label class="switch">
+                  <input type="checkbox" v-model="toggle" />
+                  <span class="slider"></span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   data() {
     return {
-      items: [
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false },
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false },
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false },
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false },
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false },
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false },
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false },
-        { column1: 'Data 1', column2: 'Data 2', column3: 'Data 3', column4: 'Data 4', column5: 'Data 5', switchValue: false }
-      ]
+      users: [
+        {
+          designationName: "Senior Product Manager",
+          companyName: "Recruit CRM",
+          name: "William Sample",
+          year: "Jul 10, 2023",
+          email: "john@example.com",
+          toggle: false,
+        },
+        {
+          designationName: "Senior Product Manager",
+          companyName: "Recruit CRM",
+          name: "William Sample",
+          year: "Jul 10, 2023",
+          email: "john@example.com",
+          toggle: false,
+        },
+      ],
     };
-  }
+  },
 };
 </script>
-
 <style scoped>
 .assigned_Jobs {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 10px 20px;
   font-size: 13px;
   font-weight: 600;
   justify-content: center;
@@ -68,9 +111,9 @@ export default {
   padding: 10px;
 }
 .assignedBtnContainer {
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
 }
 .AssignJob {
   font-size: 13px;
@@ -96,15 +139,20 @@ export default {
 }
 @media (max-width: 768px) {
   .assigned_Jobs {
-    flex-direction: assigned_Jobs_Header;
+    flex-direction: column;
   }
   .assigned_Jobs_Header {
     flex: 1;
     margin-bottom: 10px;
   }
 }
-.table-responsive {
-  overflow-x: auto;
+
+.assignData {
+  border: 1px solid var(--N300, #e9ecef);
+  height: 64px;
+  gap: 0px;
+  border-radius: 5px 0px 0px 0px;
+  margin-bottom: 10px;
 }
 
 table {
@@ -112,26 +160,15 @@ table {
   border-collapse: collapse;
 }
 
-th,
-td {
-  padding: 8px;
+thead th,
+tbody td {
+  padding: 10px 5px;
   text-align: left;
 }
 
-th {
-  background-color: #f2f2f2;
-}
-
-tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-
-tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-
-tr {
-  border-bottom: 1px solid #e9ecef;
+thead th {
+  background-color: #333;
+  color: #fff;
 }
 
 img {
@@ -139,5 +176,113 @@ img {
   height: 40px;
   border-radius: 50%;
 }
+/* styles.css */
 
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.tableAvatar {
+  background-color: #fbddb3;
+  width: 43px;
+  height: 40px;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #f08c00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.designationName {
+  font-size: 13px;
+  font-weight: 600;
+  color: #000000;
+}
+.companyName {
+  font-size: 12px;
+  font-weight: 500;
+  color: #868e96;
+}
+
+.userUI {
+  font-size: 12px;
+  font-weight: 500;
+  color: #495057;
+}
+
+.assignBtnTable {
+  font-size: 13px;
+  font-weight: 500;
+  color: #495057;
+  height: 24px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #f1f3f5;
+  background-color: #f8f9fa;
+  width: 72px;
+  cursor: pointer;
+}
+
+.viewFile {
+  width: 89px;
+  height: 32px;
+  padding: 8px 12px 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  box-shadow: 0px 1px 2px 0px #1018280d;
+  background: var(--White, #ffffff);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.tableUI{
+
+  padding: 5px 25px;
+}
 </style>
