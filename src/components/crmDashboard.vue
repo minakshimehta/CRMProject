@@ -14,6 +14,7 @@
         <div class="profileDetailsPageUI">
           <profileDetailsPage />
         </div>
+        <div><editForm/></div>
         <div>
           <userDetails/>
         </div>
@@ -32,6 +33,8 @@ import tabDesign from "../layout/tabDesign.vue";
 import subheader from "../layout/subheader.vue";
 import profileDetailsPage from "../layout/profileDetailsPage.vue";
 import userDetails from "../layout/userDetails.vue";
+import editForm from "../layout/editForm.vue";
+
 
 </script>
 
