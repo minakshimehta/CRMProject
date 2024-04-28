@@ -23,9 +23,11 @@ import requestProfileBtn from "./requestProfileBtn.vue";
   min-height: 50px;
   border: 0px 1px 1px 0px;
   opacity: 0px;
-  background-color: #f8f9fa;
+  background-color: #F8F9FA;
   display: flex;
   padding: 0px 10px;
+  border-top: none;
+
 }
 .candidatesDetails {
   font-size: 13px;

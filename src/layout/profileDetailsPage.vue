@@ -27,12 +27,12 @@
           </div>
         </div>
       </div>
-      <div class="actionBtn"><actionBtn /></div>
+      <div class="actionBtn"><actionBtn @editForm="editFormToggle" /></div>
     </div>
     <hr style="border: 1px solid #e9ecef; height: 1px" />
     <!-- contactDetails -->
 
-    <div class="contactDetailsContainer">
+    <div class="contactDetailsContainer" v-if="!isToggle">
       <div class="contactDetails">
         <div style="margin: 5px 10px; display: flex">
           <span style="padding-right: 10px">
@@ -81,11 +81,16 @@
         </div>
       </div>
     </div>
+    <div v-else>
+      <div><edit-form /></div>
+    </div>
     <hr style="border: 1px solid #e9ecef; height: 1px" />
   </div>
 </template>
 <script setup>
 import { ref } from "vue";
+import editForm from "../layout/editForm.vue";
+const isToggle = ref(false);
 
 const profileData = {
   name: "William Sample",
@@ -104,6 +109,10 @@ const profileData = {
   },
 };
 import actionBtn from "./actionBtn.vue";
+
+const editFormToggle = (event) => {
+  isToggle.value = !isToggle.value;
+};
 </script>
 
 <script setup>

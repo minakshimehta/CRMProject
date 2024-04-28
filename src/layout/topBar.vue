@@ -6,7 +6,7 @@
     <div>
       <topbarLogo />
     </div>
-    <div>
+    <div style="margin-right: 60px">
       <profile />
     </div>
   </div>
@@ -16,12 +16,11 @@
 import topbarLogo from "./topbarLogo.vue";
 import searchBar from "./searchBar.vue";
 import profile from "./profile.vue";
-
 </script>
 <style scoped>
 .topBar {
-  padding: 20px;
+  padding: 8px 16px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 </style>

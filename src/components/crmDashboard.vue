@@ -14,7 +14,7 @@
         <div class="profileDetailsPageUI">
           <profileDetailsPage />
         </div>
-        <div><editForm /></div>
+        <!-- <div><editForm /></div> -->
         <div>
           <userDetails />
         </div>

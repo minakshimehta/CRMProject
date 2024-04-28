@@ -64,6 +64,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0px 10px;
 }
 .profile_Icon {
   display: flex;

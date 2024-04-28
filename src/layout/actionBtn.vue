@@ -14,7 +14,7 @@
       </div>
       <div>
         <button class="btnUIAction svgIcons">
-          <img src="../assets//pencil.svg" alt="" />
+          <img src="../assets//pencil.svg" alt="" @click="toggleEdit" />
         </button>
       </div>
       <div>
@@ -26,6 +26,17 @@
   </div>
 </template> 
 
+
+
+<script setup>
+import { defineEmits } from "vue";
+import editForm from "./editForm.vue";
+const emit = defineEmits(["editForm"]);
+
+const toggleEdit = () => {
+  emit('editForm', true)
+}
+</script>
 
 <style scoped>
 
