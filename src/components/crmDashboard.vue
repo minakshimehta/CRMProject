@@ -64,7 +64,7 @@ import userDetails from "../layout/userDetails.vue";
   left: 57px;
 }
 .mainContainer {
-  display: flex;
+  /* display: flex; */
   
 }
 .leftSideMainContain {

@@ -39,7 +39,7 @@ export default {
   margin-bottom: -10px;
 }
 .tabsBtn {
-  padding: 30px 32px;
+  padding: 15px 32px;
   font-size: 13px;
   font-weight: 600;
 }
