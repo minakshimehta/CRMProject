@@ -104,7 +104,6 @@
         <button type="submit">Submit</button>
       </form>
 
-      <!-- Display form data for testing -->
       <div v-if="submitted">
         <h2>Form Data:</h2>
         <ul>

@@ -14,15 +14,15 @@
         <div class="profileDetailsPageUI">
           <profileDetailsPage />
         </div>
-        <div><editForm/></div>
+        <div><editForm /></div>
         <div>
-          <userDetails/>
+          <userDetails />
         </div>
         <div>
-          <tabDesign/>
+          <tabDesign />
         </div>
       </div>
-      <div></div>
+      <div class="rightSideMainContain"><rightSubHeader /></div>
     </div>
   </div>
 </template>
@@ -34,22 +34,8 @@ import subheader from "../layout/subheader.vue";
 import profileDetailsPage from "../layout/profileDetailsPage.vue";
 import userDetails from "../layout/userDetails.vue";
 import editForm from "../layout/editForm.vue";
-
-
+import rightSubHeader from "../layout/rightSubHeader.vue";
 </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
   
@@ -67,18 +53,19 @@ import editForm from "../layout/editForm.vue";
   left: 57px;
 }
 .mainContainer {
-  /* display: flex; */
-  
+  display: flex;
 }
 .leftSideMainContain {
-  width: 70%;
+  width: 75%;
   border-width: 0px, 1px, 1px, 0px;
-
-border-style: solid;
-
-border-color: var(--N300, #E9ECEF);
-
-
+  border-style: solid;
+  border-color: var(--N300, #e9ecef);
+}
+.rightSideMainContain {
+  width: 25%;
+  border-width: 0px, 1px, 1px, 0px;
+  border-style: solid;
+  border-color: var(--N300, #e9ecef);
 }
 @media (max-width: 992px) {
   .leftSideMainContain {
@@ -87,8 +74,6 @@ border-color: var(--N300, #E9ECEF);
 }
 
 .profileDetailsPageUI {
-
-
 }
 </style>
   
