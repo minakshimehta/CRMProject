@@ -24,7 +24,7 @@
     <div class="allNoteData">
       <div class="noteHeaderIcon">
         <div class="noteSvg">
-          <img src="../assets/note.svg" alt="" />
+          <img src="../assets/note.svg" alt="" style="width: 15px; height: 15px;"/>
         </div>
         <div class="noteText"></div>
         <div class="todo"></div>
@@ -79,7 +79,7 @@
   margin: 20px 10px;
   background-color: #e6f1ff;
   width: 20px;
-  height: 40px;
+  height: 20px;
   border-radius: 50px;
   display: flex;
   align-items: center;
