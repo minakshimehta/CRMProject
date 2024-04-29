@@ -4,11 +4,12 @@
       <div class="profileDEtails">
         <div class="avatarPD">
           <img
-            :src="'../assets/avatar.png'"
+            src="../assets//avatar.png"
             alt=""
             style="width: 27px; height: 27px"
           />
         </div>
+
         <div
           style="
             margin-left: 12px;
@@ -17,7 +18,42 @@
             justify-content: center;
           "
         >
-          <div class="namePD">{{ profileData.name }}</div>
+          <div class="namePD">
+            {{ profileData.name }}
+            <div style="margin-top: 4px">
+              <span class="socialMediaIcons"
+                ><img
+                  src="../assets/fb.svg"
+                  alt=""
+                  style="width: 17px; height: 17px"
+              /></span>
+              <span class="socialMediaIcons"
+                ><img
+                  src="../assets/tw.svg"
+                  alt=""
+                  style="width: 17px; height: 17px"
+              /></span>
+              <span class="socialMediaIcons"
+                ><img
+                  src="../assets/fb.svg"
+                  alt=""
+                  style="width: 17px; height: 17px"
+              /></span>
+              <span class="socialMediaIcons"
+                ><img
+                  src="../assets/ld.svg"
+                  alt=""
+                  style="width: 17px; height: 17px"
+              /></span>
+              <span class="socialMediaIcons"
+                ><img
+                  src="../assets/fb.svg"
+                  alt=""
+                  style="width: 17px; height: 17px"
+              /></span>
+            </div>
+          </div>
+
           <div class="designation_location">
             {{ profileData.designation }}
             <div>
@@ -26,6 +62,7 @@
             </div>
           </div>
         </div>
+        <div></div>
       </div>
       <div class="actionBtn"><actionBtn @editForm="editFormToggle" /></div>
     </div>
@@ -39,7 +76,7 @@
             <img
               src="../assets/massage.svg"
               alt=""
-              style="width: 17px; height: 17px"
+              style="width: 17px; height: 17px; margin-top: 2px"
             />
           </span>
 
@@ -50,7 +87,7 @@
             <img
               src="../assets/phone.svg"
               alt=""
-              style="width: 17px; height: 17px"
+              style="width: 17px; height: 17px; margin-top: 2px"
             />
           </span>
 
@@ -63,7 +100,7 @@
             <img
               src="../assets/user.svg"
               alt=""
-              style="width: 17px; height: 17px"
+              style="width: 17px; height: 17px; margin-top: 2px"
             />
           </span>
 
@@ -74,7 +111,7 @@
             ><img
               src="../assets/time.svg"
               alt=""
-              style="width: 17px; height: 17px"
+              style="width: 17px; height: 17px; margin-top: 2px"
           /></span>
 
           <span class="time_Months">{{ profileData.user.lastActive }}</span>
@@ -122,10 +159,12 @@ const editFormToggle = (event) => {
 .contactDetailsContainer {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 .profileDEtails {
   width: 50%;
   display: flex;
+  padding: 14px 15px;
 }
 .actionBtn {
   width: 50%;
@@ -182,6 +221,7 @@ const editFormToggle = (event) => {
   flex: 1;
   padding: 10px;
   display: flex;
+  justify-content: flex-end;
 }
 
 .time_Months,
@@ -192,11 +232,26 @@ const editFormToggle = (event) => {
 }
 @media (max-width: 992px) {
   .profileHeader {
-    flex-direction: column;
+    flex-direction: column !important;
   }
   .timedetailsContainer,
   .contactDetails {
     flex: 1;
+    margin-bottom: 5px;
+    padding: 0px !important;
+  }
+  .timedetailsContainer {
+    padding: 0px;
+    justify-content: flex-start;
+  }
+  .profileDEtails {
+    width: 100%;
+  }
+  .actionBtn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     margin-bottom: 10px;
   }
 }

@@ -137,9 +137,12 @@ export default {
   border: 0.5px solid #343a40;
   background-color: #ffffff;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .assigned_Jobs {
     flex-direction: column;
+    lex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
   }
   .assigned_Jobs_Header {
     flex: 1;
@@ -185,7 +188,7 @@ img {
   height: 34px;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -199,8 +202,8 @@ img {
   right: 0;
   bottom: 0;
   background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 34px;
 }
 
@@ -212,13 +215,13 @@ img {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
   border-radius: 50%;
 }
 
 input:checked + .slider {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 input:checked + .slider:before {
@@ -281,8 +284,7 @@ input:checked + .slider:before {
   font-weight: 600;
   cursor: pointer;
 }
-.tableUI{
-
+.tableUI {
   padding: 5px 25px;
 }
 </style>

@@ -24,5 +24,15 @@ input[type="text"] {
   
   
 }
+@media (max-width: 992px) {
+
+  input[type="text"] {
+  /* width: 100%; */
+
+  
+  
+}
+}
+
 
 </style>

@@ -48,4 +48,15 @@ export default {
   color: #1170ca;
   border-bottom: 3px solid #1170ca;
 }
+
+@media (max-width: 992px) {
+  .tabsHeader {
+    width: 100%;
+    overflow: scroll;
+  }
+  .tabsBtn {
+    font-size: 10px;
+    padding: 15px 20px;
+  }
+}
 </style>

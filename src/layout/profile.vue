@@ -13,7 +13,7 @@
         style="width: 20px; height: 20px"
       />
     </div>
-    
+
     <div class="svgContainer profileNotification">
       <img
         src="../assets/massage.svg"
@@ -83,12 +83,17 @@
   height: 20px;
   margin: 0 20px;
 }
-
+@media (max-width: 992px) {
+  .profile_Icon {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+}
 @media (max-width: 768px) {
   .divider {
     border-left: none;
     border-top: 2px solid #c8ccd2;
-    width: 100%;
+    width: 1px;
     height: auto;
     margin: 20px 0;
   }

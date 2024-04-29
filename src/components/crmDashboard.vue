@@ -7,14 +7,13 @@
       <leftMenuBar />
     </div>
     <div class="mainContainer">
-      <div class="leftSideMainContain">
+      <div class="leftSideMainContain col-3 col-s-12">
         <div>
           <subheader />
         </div>
         <div class="profileDetailsPageUI">
           <profileDetailsPage />
         </div>
-        <!-- <div><editForm /></div> -->
         <div>
           <userDetails />
         </div>
@@ -22,7 +21,7 @@
           <tabDesign />
         </div>
       </div>
-      <div class="rightSideMainContain"><rightSubHeader /></div>
+      <div class="rightSideMainContain col-3 col-s-12"><rightSubHeader /></div>
     </div>
   </div>
 </template>
@@ -51,10 +50,10 @@ import rightSubHeader from "../layout/rightSubHeader.vue";
   box-shadow: 0px 0px 1px 1px #0000000d; */
   position: fixed;
   left: 57px;
- 
 }
 .mainContainer {
   display: flex;
+  flex-direction: row;
   height: calc(100vh - 80px);
   overflow: auto;
 }
@@ -63,17 +62,23 @@ import rightSubHeader from "../layout/rightSubHeader.vue";
   border-width: 0px, 1px, 1px, 0px;
   border-style: solid;
   border-color: var(--N300, #e9ecef);
-
 }
 .rightSideMainContain {
   width: 25%;
   border-width: 0px, 1px, 1px, 0px;
   border-style: solid;
   border-color: var(--N300, #e9ecef);
+  margin-right: 40px;
 }
 @media (max-width: 992px) {
   .leftSideMainContain {
     width: 100%;
+  }
+  .rightSideMainContain {
+    width: 100%;
+  }
+  .mainContainer {
+    flex-direction: column;
   }
 }
 
