@@ -42,6 +42,8 @@ import profile from "./profile.vue";
   .topbar_searchBar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+
   }
 
   .dashboard {

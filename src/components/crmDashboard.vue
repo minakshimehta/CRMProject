@@ -56,6 +56,7 @@ import rightSubHeader from "../layout/rightSubHeader.vue";
   flex-direction: row;
   height: calc(100vh - 80px);
   overflow: auto;
+  width: calc(100vw - 56px);
 }
 .leftSideMainContain {
   width: 75%;
