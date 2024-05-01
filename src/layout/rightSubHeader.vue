@@ -164,7 +164,7 @@
 }
 .allNoteData {
   border: 1px solid #e9ecef;
-  height: 188px;
+  min-height: 188px;
   border-radius: 5px;
   border: 1px solid #e9ecef;
   opacity: 0px;
@@ -220,5 +220,9 @@
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
+  flex-wrap: wrap;
+
 }
+
+
 </style>

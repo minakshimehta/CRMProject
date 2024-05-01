@@ -1,12 +1,12 @@
 <template>
   <div class="topBar">
+    <div class="topbar_topbarLogo foMobile">
+      <topbarLogo />
+    </div>
     <div class="topbar_searchBar">
       <searchBar />
-      <div class="topbar_topbarLogo mobile">
-        <topbarLogo />
-      </div>
     </div>
-    <div class="topbar_topbarLogo dashboard">
+    <div class="topbar_topbarLogo Dashboard">
       <topbarLogo />
     </div>
 
@@ -29,36 +29,45 @@ import profile from "./profile.vue";
   justify-content: space-between;
 }
 @media (min-width: 991px) {
-  .mobile {
-    display: none;
+  .foMobile {
+    display: none !important;
   }
 }
 @media (max-width: 992px) {
   .topBar {
     flex-direction: column;
     padding: 10px;
+    /* margin-right: 60px; */
   }
 
   .topbar_searchBar {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center;
   }
+  .Dashboard{
 
-  .dashboard {
     display: none;
   }
+
+  /* .topbarProfile {
+    display: none !;
+  } */
 }
-@media (max-width: 600px) {
-  .topbar_searchBar{
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
+
 .mobile {
-padding-top: 10px;  }
-
+  padding-top: 10px;
 }
 
+.topbar_topbarLogo.foMobile {
+  display: flex;
+  justify-content: center;
+}
+</style>
+
+<style lang="sass" scoped>
+.topBar
+  .topbar_topbarLogo,.topbar_searchBar, .topbarProfile
+
+    margin-right: 50px
 </style>

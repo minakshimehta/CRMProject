@@ -1,32 +1,22 @@
 <template>
   <div class="profile_Icon">
-    <div class="profileNotification">
-      <button class="plusBtn">+</button>
-    </div>
+    <div class="profileIcons">
+      <div class="">
+        <button class="plusBtn">+</button>
+      </div>
 
-    <div class="divider"></div>
+      <div class="divider"></div>
 
-    <div class="svgContainer profileNotification">
-      <img
-        src="../assets/wishlist.svg"
-        alt=""
-        style="width: 20px; height: 20px"
-      />
-    </div>
+      <div class="svgContainer">
+        <img src="../assets/wishlist.svg" alt="" class="profileSvgUI" />
+      </div>
 
-    <div class="svgContainer profileNotification">
-      <img
-        src="../assets/massage.svg"
-        alt=""
-        style="width: 20px; height: 20px"
-      />
-    </div>
-    <div class="svgContainer profileNotification">
-      <img
-        src="../assets/notification.svg"
-        alt=""
-        style="width: 20px; height: 20px"
-      />
+      <div class="svgContainer">
+        <img src="../assets/massage.svg" alt="" class="profileSvgUI" />
+      </div>
+      <div class="svgContainer">
+        <img src="../assets/notification.svg" alt="" class="profileSvgUI" />
+      </div>
     </div>
     <!-- profileCard -->
     <div class="profile-card">
@@ -54,6 +44,9 @@
   background: var(--B600---Brand, #1170ca);
   color: #ffff;
   font-size: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .svgContainer {
   width: 40px;
@@ -70,11 +63,22 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2;
+  flex-wrap: wrap;
 }
-/* .profileNotification {
-  padding: 0px 20px;
-} */
+.profileIcons,
+.profile-card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  /* flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
+}
+.profileSvgUI {
+  width: 20px;
+  height: 20px;
+}
 </style>
 
 <style scoped>
@@ -83,10 +87,33 @@
   height: 20px;
   margin: 0 20px;
 }
+@media (max-width: 1102px) {
+  .profileSvgUI {
+    width: 15px;
+    height: 15px;
+  }
+  .svgContainer {
+    width: 30px;
+    height: 30px;
+  }
+}
 @media (max-width: 992px) {
   .profile_Icon {
     justify-content: flex-start;
     margin-top: 10px;
+  }
+  .profileSvgUI {
+    width: 15px;
+    height: 15px;
+  }
+  .svgContainer {
+    width: 30px;
+    height: 30px;
+  }
+  .plusBtn {
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
   }
 }
 @media (max-width: 768px) {
@@ -101,6 +128,7 @@
 .profile-card {
   display: flex;
   align-items: center;
+  padding-top: 10px;
 }
 
 .avatar {

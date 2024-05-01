@@ -12,7 +12,8 @@
       </div>
     </div>
 
-    <div class="assignData" v-for="(user, index) in users" :key="index">
+    <div class="assignData" v-for="(user, index) in users" :key="index" style="  overflow-x:auto;
+">
       <div class="tableUI">
         <table>
           <tbody>
@@ -285,6 +286,6 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 .tableUI {
-  padding: 5px 25px;
+  /* padding: 5px 25px; */
 }
 </style>

@@ -159,7 +159,8 @@ const editFormToggle = (event) => {
 .contactDetailsContainer {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: row;
+
 }
 .profileDEtails {
   width: 50%;
@@ -216,6 +217,9 @@ const editFormToggle = (event) => {
   flex: 1;
   padding: 10px;
   display: flex;
+  align-items: center;
+
+  
 }
 .timedetailsContainer {
   flex: 1;
